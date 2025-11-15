@@ -66,3 +66,74 @@ src/
  ├── App.tsx
  ├── main.tsx
  └── index.css
+```
+
+---
+
+## ⚙️ Instalación y Ejecución
+
+### 1. Clonar el repositorio
+```sh
+git clone https://github.com/waynergt/036-F-WaynerL-pez
+cd 036-F-WaynerL-pez
+```
+
+### 2. Instalar dependencias
+```sh
+npm install
+```
+
+### 3. Ejecutar en desarrollo
+```sh
+npm run dev
+```
+
+### 4. Construir para producción
+```sh
+npm run build
+```
+
+### 5. Previsualizar build
+```sh
+npm run preview
+```
+
+---
+
+## 🌐 Despliegue en Vercel
+
+Este proyecto está configurado para funcionar sin pasos adicionales.
+
+Para desplegarlo manualmente:
+
+```sh
+npm run build
+```
+
+Luego subir la carpeta `dist/` a Vercel **o** usar:
+
+```sh
+vercel
+```
+
+Una vez desplegado, el sitio queda accesible en:
+
+👉 https://036-f-wayner-l-pez.vercel.app/
+
+
+---
+
+## 👨‍💻 Autor
+
+**Wayner López**  
+Estudiante de Ingeniería en Sistemas  
+Universidad Mariano Gálvez de Guatemala  
+
+---
+
+## 📄 Licencia
+
+Este proyecto es de uso académico únicamente.  
+Todos los derechos de las imágenes y datos pertenecen a **TheCocktailDB**.
+
+---
