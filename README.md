@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# 🍸 Parcial Final – Desarrollo Web  
+Aplicación SPA desarrollada con **Vite + React + TypeScript + TailwindCSS**, como parte del examen final del curso de Desarrollo Web.  
+Incluye navegación por secciones, consumo de API real y despliegue en Vercel.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🚀 Demo en Producción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **Sitio desplegado:**  
+https://036-f-wayner-l-pez.vercel.app/
 
-## React Compiler
+🔗 **Repositorio GitHub:**  
+https://github.com/waynergt/036-F-WaynerL-pez
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Descripción del Proyecto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Esta aplicación es una **SPA (Single Page Application)** construida sin react-router, utilizando únicamente el manejo de estado de React para cambiar entre las secciones:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Inicio**
+- **Acerca de**
+- **Consumo de API**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+En la sección de **Consumo de API**, se consumen datos reales desde  
+👉 **TheCocktailDB** utilizando dos endpoints públicos:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- `/filter.php?c=Ordinary_Drink` → Lista de tragos  
+- `/lookup.php?i=ID` → Detalle de cada trago
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Se muestran al menos **15 tragos en tarjetas**, y al hacer clic sobre uno se despliega un **modal** con información detallada como:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Categoría  
+- Tipo de vaso  
+- Instrucciones  
+- Imagen en alta calidad  
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Este proyecto demuestra habilidades modernas de frontend y el uso de componentes reutilizables, manejo de estado, diseño responsive y consumo de APIs.
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+| Tecnología | Uso |
+|-----------|------|
+| **React 19** | Librería principal |
+| **Vite 5** | Herramienta de construcción ultra rápida |
+| **TypeScript** | Tipado estático |
+| **TailwindCSS** | Estilos modernos y responsive |
+| **TheCocktailDB API** | Fuente de datos |
+| **Vercel** | Despliegue del proyecto |
+
+---
+
+## 📂 Estructura del Proyecto
+
+```bash
+src/
+ ├── components/
+ │   ├── Navbar.tsx
+ │   └── CocktailGrid.tsx
+ ├── services/
+ │   └── cocktailApi.ts
+ ├── types/
+ │   └── sections.ts
+ ├── App.tsx
+ ├── main.tsx
+ └── index.css
